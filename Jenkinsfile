@@ -12,6 +12,7 @@ pipeline {
             }
             steps {
                 sh '''
+                    echo BUILDING
                     ls -la
                     node --version
                     npm --version
@@ -31,6 +32,7 @@ pipeline {
 
             steps {
                 sh '''
+                    echo TESTING
                     test -f build/index.html
                     npm test
                 '''
